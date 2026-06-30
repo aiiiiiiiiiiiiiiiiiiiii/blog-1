@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonic Speed Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo-wrap">
+        <h1 class="logo">⚡ Sonic Speed Blog</h1>
+        <span class="speed-badge">Gotta Go Fast!</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Notícias</a></li>
+          <li><a href="#">Personagens</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="ring-divider"></div>
+
+  <div class="hero">
+    <div class="container hero-content">
+      <h2 class="hero-title">Bem-vindo à Zona Verde! 🌀</h2>
+      <p class="hero-subtitle">Notícias, histórias e curiosidades sobre o universo mais veloz dos games.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <section class="posts">
+
+      <article class="post">
+        <img src="https://placehold.co/800x400/1e88e5/ffffff?text=Sonic" alt="Imagem do post" class="post-img">
+        <div class="post-content">
+          <span class="post-date">29 de Junho, 2026</span>
+          <h2 class="post-title">A Velocidade do Sonic: Como Tudo Começou</h2>
+          <p class="post-excerpt">
+            Desde sua primeira corrida em 1991, Sonic the Hedgehog conquistou fãs
+            com sua velocidade absurda e seu espírito rebelde. Veja como tudo começou.
+          </p>
+          <a href="#" class="read-more">Continuar lendo →</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://placehold.co/800x400/ffca28/1e1e1e?text=Aneis+Dourados" alt="Imagem do post" class="post-img">
+        <div class="post-content">
+          <span class="post-date">25 de Junho, 2026</span>
+          <h2 class="post-title">Os Anéis Dourados e Suas Curiosidades</h2>
+          <p class="post-excerpt">
+            Os famosos anéis amarelos são a marca registrada da série. Descubra
+            curiosidades sobre seu design e função dentro dos jogos.
+          </p>
+          <a href="#" class="read-more">Continuar lendo →</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://placehold.co/800x400/e53935/ffffff?text=Chaos+Emeralds" alt="Imagem do post" class="post-img">
+        <div class="post-content">
+          <span class="post-date">20 de Junho, 2026</span>
+          <h2 class="post-title">As Esmeraldas do Caos: Poder Supremo</h2>
+          <p class="post-excerpt">
+            As Chaos Emeralds são fundamentais na mitologia da franquia, capazes
+            de transformar Sonic em sua forma mais poderosa: Super Sonic.
+          </p>
+          <a href="#" class="read-more">Continuar lendo →</a>
+        </div>
+      </article>
+
+    </section>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Sobre o Blog</h3>
+        <p>Notícias, curiosidades e teorias sobre o universo de Sonic the Hedgehog e seus amigos.</p>
+      </div>
+      <div class="widget">
+        <h3>Personagens</h3>
+        <ul>
+          <li><a href="#">Sonic</a></li>
+          <li><a href="#">Tails</a></li>
+          <li><a href="#">Knuckles</a></li>
+          <li><a href="#">Dr. Eggman</a></li>
+          <li><a href="#">Shadow</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <section class="curiosities-section container">
+    <h2 class="section-title">💡 Curiosidades sobre Sonic</h2>
+    <p class="section-subtitle">Conhece alguma curiosidade sobre o universo Sonic? Adicione aqui!</p>
+
+    <div class="curiosity-form">
+      <input type="text" id="curiosity-input" placeholder="Ex: Sonic foi criado em 1991 pela Sega..." maxlength="200">
+      <button id="curiosity-btn">Adicionar curiosidade ⚡</button>
+    </div>
+
+    <ul class="curiosity-list" id="curiosity-list">
+      <li class="curiosity-item">
+        <span class="curiosity-icon">🦔</span>
+        <p>O nome "Sonic" foi escolhido por causa da velocidade do som, referência direta ao seu poder de corrida.</p>
+      </li>
+      <li class="curiosity-item">
+        <span class="curiosity-icon">💍</span>
+        <p>Os anéis dourados protegem Sonic de um golpe; perder todos os anéis em um hit é o que causa dano real.</p>
+      </li>
+      <li class="curiosity-item">
+        <span class="curiosity-icon">🔷</span>
+        <p>Existem sete Esmeraldas do Caos, e reunir todas permite a transformação em Super Sonic.</p>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sonic Speed Blog. Gotta go fast! 🌀</p>
+  </footer>
+
+  <script>
+    const icons = ['🦔', '⚡', '💍', '🔷', '🌀', '🏆', '🎮', '✨'];
+    const input = document.getElementById('curiosity-input');
+    const btn = document.getElementById('curiosity-btn');
+    const list = document.getElementById('curiosity-list');
+
+    function addCuriosity() {
+      const text = input.value.trim();
+      if (text === '') {
+        input.focus();
+        input.classList.add('shake');
+        setTimeout(() => input.classList.remove('shake'), 400);
+        return;
+      }
+
+      const li = document.createElement('li');
+      li.className = 'curiosity-item new-item';
+
+      const icon = document.createElement('span');
+      icon.className = 'curiosity-icon';
+      icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+
+      const p = document.createElement('p');
+      p.textContent = text;
+
+      const removeBtn = document.createElement('button');
+      removeBtn.className = 'remove-btn';
+      removeBtn.textContent = '✕';
+      removeBtn.title = 'Remover curiosidade';
+      removeBtn.onclick = () => li.remove();
+
+      li.appendChild(icon);
+      li.appendChild(p);
+      li.appendChild(removeBtn);
+      list.prepend(li);
+
+      input.value = '';
+      input.focus();
+    }
+
+    btn.addEventListener('click', addCuriosity);
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') addCuriosity();
+    });
+  </script>
+
+</body>
+</html>
